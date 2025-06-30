@@ -1,0 +1,85 @@
+<div class="hero">
+    <div class="container">
+        <h1>Hi, I'm <%= @profile[:name] %></h1>
+        <p><%= @profile[:title] %></p>
+        <p><%= @profile[:bio] %></p>
+        <div style="margin-top: 2rem;">
+            <a href="/projects" class="btn">View My Work</a>
+            <a href="/contact" class="btn btn-outline" style="margin-left: 1rem;">Get In Touch</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Skills Section -->
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-tools"></i> Skills & Technologies
+        </h2>
+        <div class="skills-grid">
+            <% @profile[:skills].each do |skill| %>
+                <div class="skill-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3><%= skill[:name] %></h3>
+                        <span style="color: #667eea; font-weight: bold;"><%= skill[:level] %>%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="<%= skill[:level] %>"></div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+    <!-- Recent Projects -->
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-rocket"></i> Featured Projects
+        </h2>
+        <div class="projects-grid">
+            <% @profile[:projects].first(2).each do |project| %>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><%= project[:title] %></h3>
+                    </div>
+                    <div class="project-body">
+                        <p><%= project[:description] %></p>
+                        <div class="tech-stack">
+                            <% project[:tech].each do |tech| %>
+                                <span class="tech-tag"><%= tech %></span>
+                            <% end %>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <a href="<%= project[:github] %>" class="btn" style="font-size: 0.875rem; padding: 8px 16px;">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="<%= project[:demo] %>" class="btn btn-outline" style="font-size: 0.875rem; padding: 8px 16px;">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/projects" class="btn">View All Projects</a>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-briefcase"></i> Experience
+        </h2>
+        <% @profile[:experience].each do |exp| %>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px; border-left: 4px solid #667eea;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <h3 style="color: #333;"><%= exp[:position] %></h3>
+                    <span style="color: #667eea; font-weight: bold;"><%= exp[:period] %></span>
+                </div>
+                <h4 style="color: #666; margin-bottom: 1rem;"><%= exp[:company] %></h4>
+                <p style="color: #555;"><%= exp[:description] %></p>
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="hero" style="padding: 2rem 0;">
+        <h1 style="font-size: 2.5rem;">About Me</h1>
+        <p>Get to know more about my journey and passion</p>
+    </div>
+
+    <div class="card">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
+            <div style="text-align: center;">
+                <div style="width: 200px; height: 200px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user" style="font-size: 4rem; color: white;"></i>
+                </div>
+                <h2 style="color: #667eea; margin-bottom: 0.5rem;"><%= @profile[:name] %></h2>
+                <p style="color: #666; font-size: 1.1rem;"><%= @profile[:title] %></p>
+            </div>
+            <div>
+                <h3 style="color: #667eea; margin-bottom: 1rem;">
+                    <i class="fas fa-quote-left"></i> My Story
+                </h3>
+                <p style="margin-bottom: 1.5rem; color: #555; line-height: 1.8;">
+                    <%= @profile[:bio] %> Saya memulai perjalanan programming dari rasa ingin tahu yang besar terhadap teknologi. 
+                    Setiap hari adalah kesempatan baru untuk belajar dan berkembang dalam dunia yang terus berevolusi ini.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: #555; line-height: 1.8;">
+                    Saya percaya bahwa code yang baik bukan hanya tentang functionality, tetapi juga tentang maintainability, 
+                    readability, dan user experience. Setiap project adalah kesempatan untuk menciptakan sesuatu yang bermakna.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-heart"></i> What I Love
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="text-align: center; padding: 1.5rem;">
+                <div style="width: 80px; height: 80px; background: rgba(102, 126, 234, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-code" style="font-size: 2rem; color: #667eea;"></i>
+                </div>
+                <h3 style="color: #333; margin-bottom: 1rem;">Clean Code</h3>
+                <p style="color: #666;">Menulis code yang elegant, efficient, dan mudah dipahami adalah passion saya.</p>
+            </div>
+            <div style="text-align: center; padding: 1.5rem;">
+                <div style="width: 80px; height: 80px; background: rgba(102, 126, 234, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-users" style="font-size: 2rem; color: #667eea;"></i>
+                </div>
+                <h3 style="color: #333; margin-bottom: 1rem;">Collaboration</h3>
+                <p style="color: #666;">Bekerja dalam tim dan berbagi knowledge untuk mencapai hasil yang luar biasa.</p>
+            </div>
+            <div style="text-align: center; padding: 1.5rem;">
+                <div style="width: 80px; height: 80px; background: rgba(102, 126, 234, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-lightbulb" style="font-size: 2rem; color: #667eea;"></i>
+                </div>
+                <h3 style="color: #333; margin-bottom: 1rem;">Innovation</h3>
+                <p style="color: #666;">Selalu mencari cara baru dan creative untuk menyelesaikan masalah complex.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-info-circle"></i> Personal Details
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div>
+                <h3 style="color: #333; margin-bottom: 1rem;">Contact Information</h3>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <i class="fas fa-envelope" style="color: #667eea; margin-right: 1rem; width: 20px;"></i>
+                    <span><%= @profile[:email] %></span>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <i class="fas fa-phone" style="color: #667eea; margin-right: 1rem; width: 20px;"></i>
+                    <span><%= @profile[:phone] %></span>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <i class="fas fa-map-marker-alt" style="color: #667eea; margin-right: 1rem; width: 20px;"></i>
+                    <span><%= @profile[:location] %></span>
+                </div>
+            </div>
+            <div>
+                <h3 style="color: #333; margin-bottom: 1rem;">Interests</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="tech-tag">Photography</span>
+                    <span class="tech-tag">Gaming</span>
+                    <span class="tech-tag">Music</span>
+                    <span class="tech-tag">Travel</span>
+                    <span class="tech-tag">Coffee</span>
+                    <span class="tech-tag">Books</span>
+                    <span class="tech-tag">Hiking</span>
+                    <span class="tech-tag">Tech News</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <h2 style="color: #667eea; margin-bottom: 1rem;">
+            <i class="fas fa-handshake"></i> Let's Work Together
+        </h2>
+        <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">
+            Interested in collaborating? I'm always open to discussing new opportunities and exciting projects.
+        </p>
+        <a href="/contact" class="btn">Get In Touch</a>
+    </div>
+</div>

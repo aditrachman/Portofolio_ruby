@@ -1,0 +1,156 @@
+<div class="container">
+    <div class="hero" style="padding: 2rem 0;">
+        <h1 style="font-size: 2.5rem;">Get In Touch</h1>
+        <p>Let's start a conversation about your next project</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0;">
+        <!-- Contact Form -->
+        <div class="card">
+            <h2 style="color: #667eea; margin-bottom: 2rem;">
+                <i class="fas fa-paper-plane"></i> Send Me a Message
+            </h2>
+            <form action="#" method="POST" style="width: 100%;">
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i> Full Name
+                    </label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">
+                        <i class="fas fa-tag"></i> Subject
+                    </label>
+                    <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">
+                        <i class="fas fa-comment"></i> Message
+                    </label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or idea..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">
+                    <i class="fas fa-send"></i> Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+            <div class="card">
+                <h2 style="color: #667eea; margin-bottom: 2rem;">
+                    <i class="fas fa-info-circle"></i> Contact Information
+                </h2>
+                
+                <div style="margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                            <i class="fas fa-envelope" style="color: white;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 0.25rem;">Email</h4>
+                            <p style="color: #666; margin: 0;"><%= @profile[:email] %></p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                            <i class="fas fa-phone" style="color: white;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 0.25rem;">Phone</h4>
+                            <p style="color: #666; margin: 0;"><%= @profile[:phone] %></p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem; padding: 1rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: white;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: #333; margin-bottom: 0.25rem;">Location</h4>
+                            <p style="color: #666; margin: 0;"><%= @profile[:location] %></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin-bottom: 1rem;">
+                    <i class="fas fa-share-alt"></i> Social Media
+                </h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" style="display: flex; align-items: center; padding: 0.75rem 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 10px; text-decoration: none; color: #667eea; transition: all 0.3s ease;">
+                        <i class="fab fa-github" style="margin-right: 0.5rem;"></i> GitHub
+                    </a>
+                    <a href="#" style="display: flex; align-items: center; padding: 0.75rem 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 10px; text-decoration: none; color: #667eea; transition: all 0.3s ease;">
+                        <i class="fab fa-linkedin" style="margin-right: 0.5rem;"></i> LinkedIn
+                    </a>
+                    <a href="#" style="display: flex; align-items: center; padding: 0.75rem 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 10px; text-decoration: none; color: #667eea; transition: all 0.3s ease;">
+                        <i class="fab fa-twitter" style="margin-right: 0.5rem;"></i> Twitter
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #667eea; margin-bottom: 1rem;">
+                    <i class="fas fa-clock"></i> Response Time
+                </h3>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    I typically respond to messages within 24 hours during weekdays. 
+                    For urgent matters, feel free to reach out via phone.
+                </p>
+                
+                <h3 style="color: #667eea; margin-bottom: 1rem;">
+                    <i class="fas fa-handshake"></i> Let's Collaborate
+                </h3>
+                <p style="color: #666;">
+                    Whether you have a project in mind, need technical consultation, 
+                    or just want to connect, I'd love to hear from you!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">
+            <i class="fas fa-question-circle"></i> Frequently Asked Questions
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div style="padding: 1.5rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px; border-left: 4px solid #667eea;">
+                <h4 style="color: #333; margin-bottom: 1rem;">What's your typical project timeline?</h4>
+                <p style="color: #666;">Project timelines vary depending on complexity, but most web applications take 2-8 weeks from concept to deployment.</p>
+            </div>
+            <div style="padding: 1.5rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px; border-left: 4px solid #667eea;">
+                <h4 style="color: #333; margin-bottom: 1rem;">Do you work on small projects?</h4>
+                <p style="color: #666;">Absolutely! I enjoy working on projects of all sizes, from simple landing pages to complex enterprise applications.</p>
+            </div>
+            <div style="padding: 1.5rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px; border-left: 4px solid #667eea;">
+                <h4 style="color: #333; margin-bottom: 1rem;">What technologies do you specialize in?</h4>
+                <p style="color: #666;">I specialize in Ruby on Rails, JavaScript (React, Node.js), and modern web technologies. I'm always learning new tools!</p>
+            </div>
+            <div style="padding: 1.5rem; background: rgba(102, 126, 234, 0.05); border-radius: 10px; border-left: 4px solid #667eea;">
+                <h4 style="color: #333; margin-bottom: 1rem;">Do you provide ongoing support?</h4>
+                <p style="color: #666;">Yes! I offer maintenance and support packages to keep your applications running smoothly after launch.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @media (max-width: 768px) {
+        .container > div:first-child {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+        }
+    }
+</style>
